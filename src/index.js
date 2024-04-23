@@ -1,7 +1,11 @@
+global.stream = require('stream-browserify');
+// Other imports and code follow
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import 'cipher-base';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

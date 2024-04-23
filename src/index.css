@@ -1,13 +1,130 @@
 body {
+  background-color: #262530;
+  color: #7595FF;
+  font-family: 'Arial', sans-serif; /* Add your preferred font */
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* New styles for app layout */
+.app-container {
+  text-align: center;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Changed to flex-start to align content to the top */
 }
+
+.app-header {
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, rgba(122, 133, 255, 0.8), rgba(228, 16, 193, 0.8));
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: Courier, monospace;
+}
+
+.account-info-container {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 8px;
+  padding: 10px;
+  border: 2px solid;
+  cursor: pointer;
+  outline: none;
+  font-size: 18px;
+  transform: translate(0);
+  background-image: linear-gradient(45deg, #242128, #18162a);
+  padding: 0.7em 2em;
+  border-radius: 17px;
+  box-shadow: 1px 1px 17px rgba(255, 255, 255, 0.438);
+  transition: box-shadow 0.25s;
+  color: rgb(217, 216, 229);
+  z-index: 1;
+  position: relative; /* Add this line */
+}
+
+.account-info-label {
+  margin-right: 10px;
+  color: #dfd6f6;
+}
+
+.account-info-value {
+  word-break: break-all;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+}
+
+.file-management, .file-sharing {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(126, 125, 178, 0.1);
+  width: 70%; /* You might want to set a max-width */
+  box-sizing: border-box; /* Makes sure padding doesn't affect overall width */
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+
+/* Styles for buttons and inputs */
+input[type="text"] {
+  margin: 10px;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: px solid #7595FF;
+  font-weight: 400;
+  cursor: pointer;
+  width: 250px; /* Adjust width as needed */
+  font-style: italic; /* Make text italic */
+}
+
+input[type="file"] {
+  border: 1px solid #7595FF;
+  background: transparent;
+  color: #7595FF;
+}
+
+button {
+  background-image: linear-gradient(
+    to right,
+    #6253e1,
+    #852d91,
+    #a3a1ff,
+    #f24645
+  );
+  color: #fff;
+  box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}
+
+button:hover {
+  background-position: 100% 0;
+}
+
+button:focus {
+  outline: none;
+}
+
+.bn48 {
+  background: linear-gradient(90deg, #1e39a5, #c50e07);
+  background-size: auto;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 300% 300%;
+  -webkit-text-fill-color: transparent;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.bn48 input[type="file"] {
+  display: none;
+}
+
+
+/* If you want to apply specific styles to other elements or classes, add them here. */
