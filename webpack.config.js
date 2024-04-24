@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './client/src/index.js',  // Adjust this path to point to your main JS file
+  entry: './src/index.js',  // Adjust this path to point to your main JS file
   output: {
     path: path.resolve(__dirname, 'dist'),  // This will output in your client/dist folder
     filename: 'bundle.js'  // The name of the output file
