@@ -8,7 +8,7 @@ import './App.css';
 
 const App = () => {
   const [account, setAccount] = useState('');
-  const [files, setFiles] = useState([]);
+  const [files, setFiles] = useState([{name:"test", owner:"test"}]);
 
   useEffect(() => {
     const initializeApp = async () => {

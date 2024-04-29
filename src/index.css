@@ -84,6 +84,7 @@ input[type="file"] {
   border: 1px solid #7595FF;
   background: transparent;
   color: #7595FF;
+  border-radius: 8px;
 }
 
 button {
