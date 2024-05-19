@@ -4,19 +4,25 @@ const webpack = require('webpack');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
-  entry: './client/src/index.js',  // Adjust this path to point to your main JS file
+  entry: './client/src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),  // This will output in your client/dist folder
-    filename: 'bundle.js'  // The name of the output file
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
   },
   resolve: {
     fallback: {
       "stream": require.resolve('stream-browserify'),
       "crypto": require.resolve("crypto-browserify"),
       "buffer": require.resolve("buffer/"),
-      "process": require.resolve("process/browser"),
-      "fs": false  // Assuming 'fs' is not used in browser context
-      // Add other polyfills you require here
+      "https": require.resolve("https-browserify"),
+      "http": require.resolve("stream-http"),
+      "os": require.resolve("os-browserify/browser"),
+      "url": require.resolve("url/"),
+      "path": require.resolve("path-browserify"),
+      "zlib": require.resolve("browserify-zlib"),
+      "assert": require.resolve("assert/"),
+      "util": require.resolve("util/"),
+      "fs": false
     }
   },
   module: {
@@ -53,6 +59,6 @@ module.exports = {
     },
     port: 3000,
     open: true,
-    historyApiFallback: true  // This is used for SPA routing, you can remove it if not required
+    historyApiFallback: true
   }
-};
+};a
